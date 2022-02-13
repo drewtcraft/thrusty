@@ -1,7 +1,7 @@
 mod models;
 mod types;
 
-use models::{Point, Color, Matter};
+use models::{Point, Color, Matter, Mass};
 use types::Direction;
 
 
@@ -10,5 +10,6 @@ fn main() {
     let d = Direction::TopLeft;
     let c = Color::new(100, 120, 130);
     let m = Matter::new(p, c);
-    println!("hellp matter {}!", m);
+    let mass = Mass::new(p, vec![m]);
+    println!("this program RUNS");
 }
